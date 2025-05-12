@@ -1,0 +1,175 @@
+{
+  "translation": {
+    "app": {
+      "name": "Tukki",
+      "tagline": "Votre partenaire de voyage"
+    },
+    "nav": {
+      "home": "Accueil",
+      "search": "Rechercher",
+      "carpooling": "Covoiturage",
+      "login": "Connexion",
+      "register": "Inscription",
+      "profile": "Profil",
+      "dashboard": "Tableau de bord",
+      "logout": "Déconnexion"
+    },
+    "home": {
+      "title": "Voyagez facilement partout au Sénégal",
+      "subtitle": "Réservez votre billet, suivez votre bus et voyagez en toute sérénité",
+      "searchTitle": "Recherchez votre trajet",
+      "fromLabel": "Départ",
+      "toLabel": "Destination",
+      "dateLabel": "Date",
+      "searchButton": "Rechercher",
+      "features": {
+        "title": "Pourquoi choisir Tukki ?",
+        "reservationTitle": "Réservation facile",
+        "reservationDesc": "Réservez votre billet en quelques clics",
+        "paymentTitle": "Paiement sécurisé",
+        "paymentDesc": "Payez en toute sécurité avec plusieurs options",
+        "trackingTitle": "Suivi en temps réel",
+        "trackingDesc": "Suivez votre bus sur la carte",
+        "carpoolingTitle": "Covoiturage",
+        "carpoolingDesc": "Partagez votre trajet ou rejoignez un covoiturage"
+      },
+      "popularRoutes": "Itinéraires populaires",
+      "testimonials": "Témoignages"
+    },
+    "auth": {
+      "email": "Email",
+      "password": "Mot de passe",
+      "confirmPassword": "Confirmer le mot de passe",
+      "fullName": "Nom complet",
+      "phoneNumber": "Numéro de téléphone",
+      "loginTitle": "Connexion",
+      "registerTitle": "Créer un compte",
+      "forgotPassword": "Mot de passe oublié ?",
+      "loginButton": "Se connecter",
+      "registerButton": "S'inscrire",
+      "resetPasswordTitle": "Réinitialiser le mot de passe",
+      "resetPasswordButton": "Envoyer le lien de réinitialisation",
+      "noAccount": "Vous n'avez pas de compte ?",
+      "hasAccount": "Vous avez déjà un compte ?"
+    },
+    "search": {
+      "title": "Résultats de recherche",
+      "noResults": "Aucun résultat trouvé",
+      "filter": "Filtrer",
+      "sort": "Trier par",
+      "price": "Prix",
+      "time": "Heure",
+      "duration": "Durée",
+      "company": "Compagnie",
+      "bookButton": "Réserver"
+    },
+    "booking": {
+      "title": "Détails de la réservation",
+      "passengerInfo": "Informations passager",
+      "tripInfo": "Informations du voyage",
+      "from": "De",
+      "to": "À",
+      "date": "Date",
+      "time": "Heure",
+      "duration": "Durée",
+      "company": "Compagnie",
+      "bus": "Bus",
+      "seat": "Siège",
+      "price": "Prix",
+      "total": "Total",
+      "confirmButton": "Confirmer et payer",
+      "cancelButton": "Annuler"
+    },
+    "payment": {
+      "title": "Paiement",
+      "method": "Méthode de paiement",
+      "cardOption": "Carte bancaire",
+      "orangeMoneyOption": "Orange Money",
+      "waveOption": "Wave",
+      "cardNumber": "Numéro de carte",
+      "expiryDate": "Date d'expiration",
+      "cvv": "CVV",
+      "phoneNumber": "Numéro de téléphone",
+      "savePaymentInfo": "Sauvegarder ces informations",
+      "payButton": "Payer maintenant",
+      "processingMessage": "Traitement du paiement...",
+      "successMessage": "Paiement réussi !",
+      "errorMessage": "Erreur de paiement"
+    },
+    "profile": {
+      "title": "Mon profil",
+      "personalInfo": "Informations personnelles",
+      "myBookings": "Mes réservations",
+      "paymentMethods": "Méthodes de paiement",
+      "preferences": "Préférences",
+      "editButton": "Modifier",
+      "saveButton": "Enregistrer",
+      "cancelButton": "Annuler"
+    },
+    "carpooling": {
+      "title": "Covoiturage",
+      "offerRide": "Proposer un trajet",
+      "findRide": "Trouver un trajet",
+      "from": "De",
+      "to": "À",
+      "date": "Date",
+      "time": "Heure",
+      "seats": "Places disponibles",
+      "price": "Prix par place",
+      "offerButton": "Proposer",
+      "requestButton": "Demander",
+      "myOffers": "Mes offres",
+      "myRequests": "Mes demandes"
+    },
+    "dashboard": {
+      "title": "Tableau de bord",
+      "welcome": "Bienvenue",
+      "upcomingTrips": "Voyages à venir",
+      "bookingHistory": "Historique des réservations",
+      "stats": "Statistiques",
+      "notifications": "Notifications"
+    },
+    "companyDashboard": {
+      "title": "Tableau de bord - Compagnie",
+      "routes": "Itinéraires",
+      "buses": "Bus",
+      "drivers": "Chauffeurs",
+      "bookings": "Réservations",
+      "revenue": "Revenus",
+      "reviews": "Avis clients",
+      "addRoute": "Ajouter un itinéraire",
+      "addBus": "Ajouter un bus",
+      "addDriver": "Ajouter un chauffeur"
+    },
+    "admin": {
+      "title": "Administration",
+      "users": "Utilisateurs",
+      "companies": "Compagnies",
+      "routes": "Itinéraires",
+      "bookings": "Réservations",
+      "payments": "Paiements",
+      "reviews": "Avis",
+      "reports": "Rapports",
+      "settings": "Paramètres"
+    },
+    "errors": {
+      "required": "Ce champ est requis",
+      "invalidEmail": "Email invalide",
+      "passwordLength": "Le mot de passe doit contenir au moins 6 caractères",
+      "passwordMatch": "Les mots de passe ne correspondent pas",
+      "invalidPhone": "Numéro de téléphone invalide",
+      "loginFailed": "Email ou mot de passe incorrect",
+      "registrationFailed": "L'inscription a échoué",
+      "networkError": "Erreur de connexion au serveur",
+      "pageNotFound": "Page non trouvée"
+    },
+    "footer": {
+      "about": "À propos",
+      "contact": "Contact",
+      "terms": "Conditions d'utilisation",
+      "privacy": "Politique de confidentialité",
+      "faq": "FAQ",
+      "copyright": "© 2025 Tukki. Tous droits réservés."
+    }
+  }
+}

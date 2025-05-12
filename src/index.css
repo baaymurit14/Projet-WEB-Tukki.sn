@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 16 100 213;
+    --color-primary-light: 59 130 246;
+    --color-secondary: 55 65 81;
+    --color-accent: 249 115 22;
+    --color-success: 34 197 94;
+    --color-warning: 234 179 8;
+    --color-error: 239 68 68;
+    --font-family: 'Poppins', sans-serif;
+  }
+
+  html {
+    font-family: var(--font-family);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-gray-800 antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary text-white hover:bg-blue-700 focus:ring-blue-500;
+  }
+
+  .btn-secondary {
+    @apply btn bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500;
+  }
+
+  .btn-outline {
+    @apply btn border border-primary text-primary hover:bg-primary hover:text-white focus:ring-blue-500;
+  }
+
+  .btn-danger {
+    @apply btn bg-red-600 text-white hover:bg-red-700 focus:ring-red-500;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden;
+  }
+
+  .input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+  }
+
+  .container-app {
+    @apply container mx-auto px-4 py-8;
+  }
+}
+
+/* Animation pour les transitions */
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+/* Styles pour Leaflet */
+.leaflet-container {
+  width: 100%;
+  height: 400px;
+}
+
+/* Animation de bus */
+.bus-animation {
+  position: absolute;
+  bottom: 0;
+  left: -100px; /* Commence hors de l'écran */
+  animation: moveBus 10s linear infinite; /* Animation infinie */
+}
+
+@keyframes moveBus {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%); /* Traverse tout l'écran */
+  }
+}
+
+/* Style pour les champs de type date */
+input[type="date"] {
+  color: #000; /* Texte noir */
+  background-color: #fff; /* Fond blanc */
+} 
+
+/* Style pour les champs de saisie */
+.input {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+  color: #000; /* Texte noir */
+  background-color: #f9f9f9; /* Fond légèrement gris */
+}
+
+/* Style pour la liste des suggestions */
+.suggestions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9; /* Fond légèrement gris */
+  max-height: 150px;
+  overflow-y: auto;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre pour la visibilité */
+}
+
+.suggestions li {
+  padding: 8px;
+  cursor: pointer;
+  color: #333; /* Texte gris foncé */
+}
+
+.suggestions li:hover {
+  background-color: #e5e5e5; /* Fond gris clair au survol */
+  color: #000; /* Texte noir au survol */
+}
+
+/* Style pour les boutons avec les flèches */
+.input-button {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #333; /* Couleur par défaut de la flèche */
+}
+
+.input-button:hover {
+  color: #000; /* Couleur plus foncée au survol */
+}
+
+.input-button:focus {
+  outline: none;
+}

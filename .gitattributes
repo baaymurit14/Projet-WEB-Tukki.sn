@@ -1,0 +1,13 @@
+# Normalisation des fins de ligne
+* text=auto
+
+# Spécifique à certains types de fichiers
+*.js text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.sh text eol=lf
+*.bat text eol=crlf

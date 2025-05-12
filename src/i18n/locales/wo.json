@@ -1,0 +1,175 @@
+{
+  "translation": {
+    "app": {
+      "name": "Tukki",
+      "tagline": "Sa àndadoo ci tukki bi"
+    },
+    "nav": {
+      "home": "Njël",
+      "search": "Seet",
+      "carpooling": "Bokk daamaar",
+      "login": "Dugg",
+      "register": "Bindoo",
+      "profile": "Sama profil",
+      "dashboard": "Tablo de bord",
+      "logout": "Génn"
+    },
+    "home": {
+      "title": "Dooley tukki ci Sénégal yëpp",
+      "subtitle": "Jëndal sa biye, toppal sa kaar ak tukki ci jàmm",
+      "searchTitle": "Seetil sa yoon",
+      "fromLabel": "Foo jóge",
+      "toLabel": "Foo jëm",
+      "dateLabel": "Bés",
+      "searchButton": "Seet",
+      "features": {
+        "title": "Lu tax nga tànn Tukki?",
+        "reservationTitle": "Jënd biye bu yomb",
+        "reservationDesc": "Jëndal sa biye ci ay clik rekk",
+        "paymentTitle": "Fey bu wóor",
+        "paymentDesc": "Fey bu wóor ak ay tànneef yu bari",
+        "trackingTitle": "Topp sa kar ci saa si",
+        "trackingDesc": "Toppal sa kar ci kàrt bi",
+        "carpoolingTitle": "Bokk watiir",
+        "carpoolingDesc": "Séddool sa tukki walla bokkal ci yeneen bi"
+      },
+      "popularRoutes": "Yoon yi ëpp siiw",
+      "testimonials": "Seede yi"
+    },
+    "auth": {
+      "email": "Email",
+      "password": "Baatu jumtukaay",
+      "confirmPassword": "Dëggalal baatu jumtukaay bi",
+      "fullName": "Tur bu mat",
+      "phoneNumber": "Numéro telefon",
+      "loginTitle": "Dugg",
+      "registerTitle": "Sos am kompt",
+      "forgotPassword": "Baatu jumtukaay bi fàtte nga ko?",
+      "loginButton": "Duggal",
+      "registerButton": "Bindool",
+      "resetPasswordTitle": "Soppi baatu jumtukaay bi",
+      "resetPasswordButton": "Yónni lëkkalekaay bi",
+      "noAccount": "Amoo kompt?",
+      "hasAccount": "Amnga kompt ba noppi?"
+    },
+    "search": {
+      "title": "Yebbi yi",
+      "noResults": "Amul yebbi",
+      "filter": "Taneel",
+      "sort": "Tëggalee",
+      "price": "Njëg",
+      "time": "Waxtu",
+      "duration": "Diir",
+      "company": "Entreprise",
+      "bookButton": "Jënd"
+    },
+    "booking": {
+      "title": "Fàttali jënd bi",
+      "passengerInfo": "Xibaar ci tukkilkaat bi",
+      "tripInfo": "Xibaar ci tukki bi",
+      "from": "Jóge",
+      "to": "Jëm",
+      "date": "Bés",
+      "time": "Waxtu",
+      "duration": "Diir",
+      "company": "Entreprise",
+      "bus": "Kar",
+      "seat": "Togg",
+      "price": "Njëg",
+      "total": "Limu",
+      "confirmButton": "Dëggal te fey",
+      "cancelButton": "Bayyi"
+    },
+    "payment": {
+      "title": "Peyemaan",
+      "method": "Naka lañuy feye",
+      "cardOption": "Kart bank",
+      "orangeMoneyOption": "Orange Money",
+      "waveOption": "Wave",
+      "cardNumber": "Nimero kart bi",
+      "expiryDate": "Bes bu jeex",
+      "cvv": "CVV",
+      "phoneNumber": "Numéro telefon",
+      "savePaymentInfo": "Denc xibaar yii",
+      "payButton": "Fey leegi",
+      "processingMessage": "Peyemaan baa ngi dox...",
+      "successMessage": "Peyemaan bi baax na!",
+      "errorMessage": "Njumte ci peyemaan bi"
+    },
+    "profile": {
+      "title": "Sama profil",
+      "personalInfo": "Xibaar yu ma jëm",
+      "myBookings": "Sama jënd yi",
+      "paymentMethods": "Yii laa feye",
+      "preferences": "Li ma tànn",
+      "editButton": "Soppi",
+      "saveButton": "Denc",
+      "cancelButton": "Bayyi"
+    },
+    "carpooling": {
+      "title": "Bokk watiir",
+      "offerRide": "Joxe tukki",
+      "findRide": "Seet tukki",
+      "from": "Jóge",
+      "to": "Jëm",
+      "date": "Bés",
+      "time": "Waxtu",
+      "seats": "Togg yi am",
+      "price": "Njëg bépp togg",
+      "offerButton": "Joxe",
+      "requestButton": "Laaj",
+      "myOffers": "Sama joxe yi",
+      "myRequests": "Sama laaj yi"
+    },
+    "dashboard": {
+      "title": "Tablo de bord",
+      "welcome": "Dalal jamm",
+      "upcomingTrips": "Tukki yi ñëw",
+      "bookingHistory": "Jënd yi weesu",
+      "stats": "Limku",
+      "notifications": "Yëgle yi"
+    },
+    "companyDashboard": {
+      "title": "Tablo de bord - Entreprise",
+      "routes": "Yoon yi",
+      "buses": "Kar yi",
+      "drivers": "Watukat yi",
+      "bookings": "Jënd yi",
+      "revenue": "Xaalis yi",
+      "reviews": "Xalaat client yi",
+      "addRoute": "Yokk yoon",
+      "addBus": "Yokk kar",
+      "addDriver": "Yokk watukat"
+    },
+    "admin": {
+      "title": "Saytu gi",
+      "users": "Jëfandikukat yi",
+      "companies": "Entreprise yi",
+      "routes": "Yoon yi",
+      "bookings": "Jënd yi",
+      "payments": "Peyemaan yi",
+      "reviews": "Xalaat yi",
+      "reports": "Njëlben yi",
+      "settings": "Kom kom yi"
+    },
+    "errors": {
+      "required": "Bii waroon na fées",
+      "invalidEmail": "Email bi baaxul",
+      "passwordLength": "Baatu jumtukaay bi waral am 6 araf",
+      "passwordMatch": "Baatu jumtukaay yi bokkuloo",
+      "invalidPhone": "Numéro telefon bi baaxul",
+      "loginFailed": "Email walla baatu jumtukaay bi baaxul",
+      "registrationFailed": "Bindoo gi antuwul",
+      "networkError": "Njumte ci jokkoo ak servër bi",
+      "pageNotFound": "Xët wi kenn gissu ko"
+    },
+    "footer": {
+      "about": "Ci mbirum",
+      "contact": "Jokkoo",
+      "terms": "Sart yi",
+      "privacy": "Politig di sutura",
+      "faq": "Laaj yi ëpp",
+      "copyright": "© 2025 Tukki. Sañ sañ yépp am nañ boroom."
+    }
+  }
+}
