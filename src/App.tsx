@@ -8,13 +8,25 @@ import Connexion from './pages/Connexion';
 import Inscription from './pages/Inscription';
 import Covoiturage from './pages/Covoiturage';
 import PageNonTrouvee from './pages/PageNonTrouvee';
-import Admin from './pages/Admin'; // Import de l'interface admin
 import Reservation from './pages/Reservation';
 import Ticket from './pages/Ticket';
 import Dashboard from './pages/Dashboard';
 import ConnexionOrganisation from './pages/ConnexionOrganisation';
 import InscriptionOrganisation from './pages/InscriptionOrganisation';
 import Recherche from './pages/Recherche';
+
+// Imports pour l'admin
+import AdminLayout from './pages/admin/AdminLayout';
+import AdminDashboard from './pages/admin/AdminDashboard';
+import AdminTrajets from './pages/admin/AdminTrajets';
+import AdminReservations from './pages/admin/AdminReservations';
+import AdminUtilisateurs from './pages/admin/AdminUtilisateurs';
+import AdminChauffeurs from './pages/admin/AdminChauffeurs';
+import AdminTemoignages from './pages/admin/AdminTemoignages';
+import AdminParametres from './pages/admin/AdminParametres';
+
+// Imports pour l'utilisateur
+import Profile from './pages/Profile';
 
 function App() {
   return (
@@ -27,15 +39,24 @@ function App() {
             <Route path="/connexion" element={<Connexion />} />
             <Route path="/inscription" element={<Inscription />} />
             <Route path="/covoiturage" element={<Covoiturage />} />
-            <Route path="/admin" element={<Admin />} /> {/* Route pour l'interface admin */}
-            <Route path="/" element={<Accueil />} />
             <Route path="/reservation" element={<Reservation />} />
             <Route path="/ticket" element={<Ticket />} />
-            <Route path="/dashboard" element={<Dashboard />} /> {/* Route pour le tableau de bord des organisations */}
+            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/connexion-organisation" element={<ConnexionOrganisation />} />
             <Route path="/inscription-organisation" element={<InscriptionOrganisation />} />
-            {/* Route pour l'inscription des organisations */}
             <Route path="/recherche" element={<Recherche />} />
+            <Route path="/profile" element={<Profile />} />
+            {/* Routes pour l'interface admin */}
+            <Route path="/admin" element={<AdminLayout />}>
+              <Route index element={<AdminDashboard />} />
+              <Route path="trajets" element={<AdminTrajets />} />
+              <Route path="reservations" element={<AdminReservations />} />
+              <Route path="utilisateurs" element={<AdminUtilisateurs />} />
+              <Route path="chauffeurs" element={<AdminChauffeurs />} />
+              <Route path="temoignages" element={<AdminTemoignages />} />
+              <Route path="parametres" element={<AdminParametres />} />
+            </Route>
+
             <Route path="*" element={<PageNonTrouvee />} />
           </Routes>
         </Suspense>

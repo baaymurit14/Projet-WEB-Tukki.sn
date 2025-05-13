@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { createClient, SupabaseClient, User } from '@supabase/supabase-js';
+import { createClient, User } from '@supabase/supabase-js';
 
 const supabase = createClient(
   import.meta.env.VITE_SUPABASE_URL || '',
@@ -12,6 +12,7 @@ type Utilisateur = {
   email: string;
   telephone: string;
   role: 'utilisateur' | 'compagnie' | 'admin';
+  photo?: string;
 };
 
 type EtatAuthentification = {
