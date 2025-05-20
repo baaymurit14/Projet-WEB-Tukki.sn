@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Mail, Lock, LogIn, AlertCircle } from 'lucide-react';
-import { useAuth } from '../contexte/AuthentificationContexte';
+import { useAuth, supabase } from '../contexte/AuthentificationContexte';
 
 const Connexion: React.FC = () => {
   const { t } = useTranslation();
@@ -21,24 +21,48 @@ const Connexion: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Réinitialiser les erreurs précédentes
     setErreurForm(null);
-    
-    // Validation basique
+
     if (!email.trim() || !motDePasse.trim()) {
       setErreurForm(t('errors.required'));
       return;
     }
-    
+
     try {
       setChargement(true);
       await connexion(email, motDePasse);
-      navigate(redirectTo);
+
+      // Récupérer l'utilisateur connecté depuis Supabase
+      const {
+        data: { user },
+        error: userError,
+      } = await supabase.auth.getUser();
+
+      if (userError || !user) {
+        throw userError || new Error('Utilisateur non trouvé');
+      }
+
+      // Récupérer le profil pour vérifier le rôle
+      const { data: profile, error } = await supabase
+        .from('profiles')
+        .select('role')
+        .eq('id', user.id)
+        .single();
+
+      if (error) {
+        throw error;
+      }
+
+      if (profile?.role === 'admin') {
+        navigate('/admin');
+      } else {
+        navigate(redirectTo);
+      }
     } catch (error: any) {
       console.error('Erreur de connexion:', error);
       setErreurForm(
-        error.response?.data?.message || 
+        error.response?.data?.message ||
+        error.message ||
         t('errors.loginFailed')
       );
     } finally {

@@ -110,4 +110,3 @@ FOR ALL
 TO authenticated
 USING (is_admin())
 WITH CHECK (is_admin());
-
