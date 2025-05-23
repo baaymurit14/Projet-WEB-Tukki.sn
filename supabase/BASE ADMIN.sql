@@ -110,3 +110,14 @@ FOR ALL
 TO authenticated
 USING (is_admin())
 WITH CHECK (is_admin());
+
+-- Donner accès complet à l'admin sur les position 
+CREATE POLICY "Admin accès complet positions"
+  ON positions FOR ALL
+  TO authenticated
+  USING (
+    EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin')
+  )
+  WITH CHECK (
+    EXISTS (SELECT 1 FROM profiles WHERE id = auth.uid() AND role = 'admin')
+  );

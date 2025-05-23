@@ -14,6 +14,7 @@ import Dashboard from './pages/Dashboard';
 import ConnexionOrganisation from './pages/ConnexionOrganisation';
 import InscriptionOrganisation from './pages/InscriptionOrganisation';
 import Recherche from './pages/Recherche';
+import PageSuivi from './pages/PageSuivi';
 
 // Imports pour l'admin
 import AdminLayout from './pages/admin/AdminLayout';
@@ -46,6 +47,8 @@ function App() {
             <Route path="/inscription-organisation" element={<InscriptionOrganisation />} />
             <Route path="/recherche" element={<Recherche />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/suivi" element={<PageSuivi />} />
+            {/* Routes pour l'interface utilisateur */}
             {/* Routes pour l'interface admin */}
             <Route path="/admin" element={<AdminLayout />}>
               <Route index element={<AdminDashboard />} />

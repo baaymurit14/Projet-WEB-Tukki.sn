@@ -160,7 +160,7 @@ const Accueil: React.FC = () => {
             photo: femme1
           },
           note: 4,
-          commentaire: 'Très bonne expérience avec Tukki.',
+          commentaire: 'Très bonne expérience avec Tukki. Le trajet était agréable, mais j\'aurais aimé plus de choix de sièges.',
           date: '2025-08-22',
         },
         {

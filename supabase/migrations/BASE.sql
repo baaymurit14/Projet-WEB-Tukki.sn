@@ -116,6 +116,50 @@ CREATE TABLE IF NOT EXISTS reservations_bus (
   created_at timestamptz DEFAULT now()
 );
 
+-- Table position 
+CREATE TABLE IF NOT EXISTS positions (
+  id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  vehicule_id uuid NOT NULL REFERENCES vehicules(id) ON DELETE CASCADE,
+  lat double precision NOT NULL,
+  lng double precision NOT NULL,
+  type text CHECK (type IN ('bus', 'voiture')),
+  updated_at timestamptz DEFAULT now()
+);
+
+-- Activer la sécurité RLS sur la table positions
+ALTER TABLE positions ENABLE ROW LEVEL SECURITY;
+
+-- Policy : chaque utilisateur peut voir toutes les positions (lecture publique pour le suivi)
+CREATE POLICY "Voir toutes les positions"
+  ON positions FOR SELECT
+  TO authenticated
+  USING (true);
+
+-- Policy : chaque utilisateur peut insérer une position pour un véhicule qu'il possède (à adapter selon ta logique)
+CREATE POLICY "Ajouter une position pour son véhicule"
+  ON positions FOR INSERT
+  TO authenticated
+  WITH CHECK (
+    vehicule_id IN (SELECT id FROM vehicules WHERE proprietaire_id = auth.uid())
+  );
+
+-- Policy : chaque utilisateur peut modifier la position de ses propres véhicules
+CREATE POLICY "Modifier la position de son véhicule"
+  ON positions FOR UPDATE
+  TO authenticated
+  USING (
+    vehicule_id IN (SELECT id FROM vehicules WHERE proprietaire_id = auth.uid())
+  );
+
+-- Policy : chaque utilisateur peut supprimer la position de ses propres véhicules
+CREATE POLICY "Supprimer la position de son véhicule"
+  ON positions FOR DELETE
+  TO authenticated
+  USING (
+    vehicule_id IN (SELECT id FROM vehicules WHERE proprietaire_id = auth.uid())
+  );
+
+
 -- Trigger pour diminuer les places_restantes après une réservation confirmée
 CREATE OR REPLACE FUNCTION decrementer_places_restantes()
 RETURNS TRIGGER AS $$

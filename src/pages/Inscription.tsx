@@ -140,7 +140,7 @@ const Inscription: React.FC = () => {
                   type="text"
                   value={formData.nom}
                   onChange={handleChange}
-                  className="input pl-10"
+                  className="input connexion-input pl-14"
                   placeholder="Prénom Nom"
                 />
               </div>
@@ -162,7 +162,7 @@ const Inscription: React.FC = () => {
                   autoComplete="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="input pl-10"
+                  className="input connexion-input pl-14"
                   placeholder="exemple@email.com"
                 />
               </div>
@@ -183,7 +183,7 @@ const Inscription: React.FC = () => {
                   type="tel"
                   value={formData.telephone}
                   onChange={handleChange}
-                  className="input pl-10"
+                  className="input connexion-input pl-14"
                   placeholder="+221 XX XXX XX XX"
                 />
               </div>
@@ -204,7 +204,7 @@ const Inscription: React.FC = () => {
                   type="password"
                   value={formData.motDePasse}
                   onChange={handleChange}
-                  className="input pl-10"
+                  className="input connexion-input pl-14"
                   placeholder="••••••••"
                 />
               </div>
@@ -225,7 +225,7 @@ const Inscription: React.FC = () => {
                   type="password"
                   value={formData.confirmationMotDePasse}
                   onChange={handleChange}
-                  className="input pl-10"
+                  className="input connexion-input pl-14"
                   placeholder="••••••••"
                 />
               </div>

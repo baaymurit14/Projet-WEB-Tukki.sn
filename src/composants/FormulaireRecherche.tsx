@@ -93,7 +93,7 @@ const FormulaireRecherche: React.FC<FormulaireRechercheProps> = ({
             <input
               type="text"
               id="depart"
-              className="input"
+              className="input px-4 py-2"
               placeholder="Ex: Dakar"
               value={depart}
               onChange={(e) => handleInputChange(e.target.value, setDepart, 'depart')}
@@ -130,7 +130,7 @@ const FormulaireRecherche: React.FC<FormulaireRechercheProps> = ({
             <input
               type="text"
               id="arrivee"
-              className="input"
+              className="input px-4 py-2"
               placeholder="Ex: Saint-Louis"
               value={arrivee}
               onChange={(e) => handleInputChange(e.target.value, setArrivee, 'arrivee')}
@@ -166,10 +166,11 @@ const FormulaireRecherche: React.FC<FormulaireRechercheProps> = ({
           <input
             type="date"
             id="date"
-            className="input text-black bg-white"
+            className="input px-4 py-2"
             value={date}
             onChange={(e) => setDate(e.target.value)}
             required
+            placeholder="JJ/MM/AAAA"
           />
         </div>
       </div>

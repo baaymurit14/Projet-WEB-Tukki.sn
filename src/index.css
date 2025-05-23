@@ -66,7 +66,10 @@
   }
 
   .input {
-    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+    @apply w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+    color: #000; /* Texte noir */
+    background-color: #f9f9f9; /* Fond légèrement gris */
+    /* PAS de px-3 ou pl-14 ici ! Gérez le padding dans le composant */
   }
 
   .label {
@@ -123,13 +126,6 @@ input[type="date"] {
   background-color: #fff; /* Fond blanc */
 } 
 
-/* Style pour les champs de saisie */
-.input {
-  @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
-  color: #000; /* Texte noir */
-  background-color: #f9f9f9; /* Fond légèrement gris */
-}
-
 /* Style pour la liste des suggestions */
 .suggestions {
   list-style: none;
@@ -174,4 +170,11 @@ input[type="date"] {
 
 .input-button:focus {
   outline: none;
+}
+
+/* pour les champs de connexion */
+.connexion-input {
+  padding-top: 0.75rem;    /* py-3 */
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
 }

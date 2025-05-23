@@ -84,25 +84,29 @@ const Connexion: React.FC = () => {
             {t('auth.loginTitle')}
           </h1>
           <p className="text-gray-600">
-            {t('auth.noAccount')} <Link to="/inscription" className="text-primary hover:underline">{t('auth.registerButton')}</Link>
+            {t('auth.noAccount')}{' '}
+            <Link to="/inscription" className="text-primary hover:underline">
+              {t('auth.registerButton')}
+            </Link>
           </p>
         </div>
-        
+
         {erreurForm && (
           <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-md flex items-start">
             <AlertCircle size={20} className="mr-2 mt-0.5 flex-shrink-0" />
             <span>{erreurForm}</span>
           </div>
         )}
-        
+
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           <div className="space-y-4">
+            {/* Champ Email */}
             <div>
               <label htmlFor="email" className="label">
                 {t('auth.email')}
               </label>
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <div className="relative mb-2">
+                <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
                   <Mail size={18} className="text-gray-400" />
                 </div>
                 <input
@@ -113,26 +117,31 @@ const Connexion: React.FC = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="input pl-10"
+                  className="input connexion-input pl-14"
                   placeholder="exemple@email.com"
                 />
               </div>
             </div>
-            
+
+            {/* Champ Mot de passe */}
             <div>
               <div className="flex justify-between">
                 <label htmlFor="password" className="label">
                   {t('auth.password')}
                 </label>
-                <Link to="/mot-de-passe-oublie" className="text-sm text-primary hover:underline">
+                <Link
+                  to="/mot-de-passe-oublie"
+                  className="text-sm text-primary hover:underline"
+                >
                   {t('auth.forgotPassword')}
                 </Link>
               </div>
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <div className="relative mb-2">
+                <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
                   <Lock size={18} className="text-gray-400" />
                 </div>
                 <input
+                  className="input connexion-input pl-14"
                   id="password"
                   name="password"
                   type="password"
@@ -140,13 +149,12 @@ const Connexion: React.FC = () => {
                   value={motDePasse}
                   onChange={(e) => setMotDePasse(e.target.value)}
                   required
-                  className="input pl-10"
                   placeholder="••••••••"
                 />
               </div>
             </div>
           </div>
-          
+
           <div>
             <button
               type="submit"
